@@ -9,20 +9,21 @@ import helloworld.renderer.MessageRenderer;
 
 public class MainSpring {
 	public static void main(String[] args) {
-		//Création de l'application context à partir de classe de configuration.
-		// ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
-		GenericXmlApplicationContext ctx=new GenericXmlApplicationContext();
+		// Création de l'application context à partir de classe de configuration.
+		// ApplicationContext ctx = new
+		// AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("app-context.xml");
 		ctx.refresh();
 
-		//Injection de dépendences, le premier arg correspond à l'id du bean dans l'xml
+		// Injection de dépendences, le premier arg correspond à l'id du bean dans l'xml
 		MessageRenderer mr = ctx.getBean("renderer", MessageRenderer.class);
 
 		mr.render();
 
-		//fermeture de la ressource, obligé de caster car ApplicationContext n'offre pas close();
+		// fermeture de la ressource, obligé de caster car ApplicationContext n'offre
+		// pas close();
 		ctx.close();
-		}
-
+	}
 
 }

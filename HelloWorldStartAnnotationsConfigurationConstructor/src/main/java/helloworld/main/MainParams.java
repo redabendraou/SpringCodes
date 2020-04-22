@@ -1,6 +1,8 @@
-package helloworld.parametersexample;
+package helloworld.main;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
+
+import helloworld.parametersexample.ParametersInjectionExample;
 
 
 public class MainParams {

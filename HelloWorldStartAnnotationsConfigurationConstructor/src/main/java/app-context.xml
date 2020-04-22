@@ -26,13 +26,8 @@
 		<constructor-arg value="I hope that someone gets my message in a bottle" 
 		/> </bean> -->
 
-	<!-- cas de plusieurs const avec même nombre de param, utiliser type=""-->
-<!-- 	<bean id="constructorConfusion"
-		class="com.apress.prospring5.ch3.xml.ConstructorConfusion">
-		<constructor-arg type="int">
-			<value>90</value>
-		</constructor-arg>
-	</bean> -->
-
+	<!-- cas de plusieurs const avec même nombre de param, utiliser type="" -->
+	<!-- <bean id="constructorConfusion" class="com.apress.prospring5.ch3.xml.ConstructorConfusion"> 
+		<constructor-arg type="int"> <value>90</value> </constructor-arg> </bean> -->
 </beans>
  
