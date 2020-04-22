@@ -8,8 +8,13 @@
 
 	<bean id="provider"
 		class="helloworld.provider.HelloWorldMessageProvider" />
-	<bean id="renderer"
-		class="helloworld.renderer.StandardOutMessageRenderer"
-		p:messageProvider-ref="provider" />
+	<!-- <bean id="renderer" class="helloworld.renderer.StandardOutMessageRenderer" 
+		p:messageProvider-ref="provider" /> -->
 
+<!-- 	<bean id="renderer"
+		class="helloworld.renderer.StandardOutMessageRenderer">
+		<property name="messageProvider">
+			<ref bean="provider" />
+		</property>
+	</bean> -->
 </beans>

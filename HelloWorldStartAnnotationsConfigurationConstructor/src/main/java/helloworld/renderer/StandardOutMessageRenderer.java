@@ -11,6 +11,9 @@ import helloworld.provider.MessageProvider;
 
 @Service("renderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
+	
+	@Autowired
+	@Qualifier("configProvider")
 	private MessageProvider messageProvider;
 
 	@Override
@@ -22,14 +25,16 @@ public class StandardOutMessageRenderer implements MessageRenderer {
 		System.out.println(messageProvider.getMessage());
 	}
 
-	@Override
-	@Autowired
+	
 	//je peux aussi utiliser cette annotation à la place d'@Autowired qui fait partie du JSr-250 standard 
 	//@Resource
 	//Si je veux cibler un bean par son nom, soit je j'utilise @Qualifier, soit @Resource("provider")
-	@Qualifier("configProvider")
 	//je peux aussi utiliser @Inject à la place d'@Autowired qui fait partie de la Jsr-330 (JEE)
 	//@Inject
+	
+	@Override
+	//@Autowired
+//	@Qualifier("configProvider")
 	public void setMessageProvider(MessageProvider provider) {
 		this.messageProvider = provider;
 	}
